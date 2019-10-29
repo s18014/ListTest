@@ -27,7 +27,7 @@ public class TestAdapter extends RecyclerView.Adapter<TestAdapter.ViewHolder> {
     public TestAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
 
-        // simple_list_item_1は一つのTextViewを持っているActivityみたいなやつ、ディフォルトで用意されている
+        // simple_list_item_1は一つのTextViewを持っているレイアウトファイル、ディフォルトで用意されている
         View view = inflater.inflate(android.R.layout.simple_list_item_1, parent, false);
         return new ViewHolder(view);
     }
@@ -50,11 +50,11 @@ public class TestAdapter extends RecyclerView.Adapter<TestAdapter.ViewHolder> {
         return arrayString.length;
     }
 
-    // Itemを表示するためのレイアウト、小さなActivityみたいな感じ
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView textView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+
             // simple_list_item_1が持っているTextViewの参照を取っている
             textView = itemView.findViewById(android.R.id.text1);
         }
